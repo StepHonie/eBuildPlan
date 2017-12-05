@@ -1,0 +1,50 @@
+
+html,body,#indexInfo {
+    height:100%
+}
+
+#indexInfo {
+  width:86%;
+  margin:auto;
+  border:2px #ECF0F5 solid;
+}
+
+#headName {
+  height:30px;
+  background-color: #3C8DBC;
+}
+
+span {
+  font-size:20px;
+  color:white;
+  margin-left:10px;
+}
+
+#indexHead {
+  height:100px;
+  background-color: #ECF0F5;
+}
+
+#indexBody {
+}
+
+#indexFooter {
+  position:fixed;
+  height:50px;
+  width:86%;
+  bottom:0;
+  background-color: #ECF0F5;
+}
+
+
+#tbhead td{
+  font-weight:bold;
+  font-size:15px;
+  color:blue;
+  height:27px;
+}
+
+.form-control {
+  height:30px;
+  width:150px;
+}

@@ -1,0 +1,59 @@
+{
+  "getCustomer":
+  {
+    "sql":"select customer_id as Value,customer as Label from Customer_V"
+  },
+  "getCusfrmEmail":
+  {
+    "sql":"select customer_id as Label from EmailGroup"
+  },
+  "getFamily":
+  {
+    "sql":"select family_id as Value,family as Label from Family_v"
+  },
+  "getArea":
+  {
+    "sql":"select Area as Value, Area as Label from AreaStation"
+  },
+  "getInputStation":
+  {
+    "sql":"select input_station as Value, input_station as Label from AreaStation"
+  },
+  "getOutputStation":
+  {
+    "sql":"select output_station as Value, output_station as Label from AreaStation"
+  },
+  "getAreaStation":
+  {
+    "sql":"select * from AreaStation"
+  },
+  "getEmailGroup":
+  {
+    "sql":"select * from EmailGroup"
+  },
+  "getAssembly":
+  {
+    "sql":"select * from Assemblies"
+  },
+  "addAreaStationList":
+  {
+    "sql":"insert into AreaStation values(@customer_id,@family_id,'@area','@input_station','@output_station',@input_panelcount,@output_panelcount)"
+  },
+  "delAreaStationList":
+  {
+    "sql":"delete from AreaStation where ID =@ID"
+  },
+  "addEmailList":
+  {
+    "sql":"insert into EmailGroup values('@EmailAddress','@Customer','@Family','@EmailGroup')"
+  },
+  "delEmailList":
+  {
+    "sql":"delete from EmailGroup where ID =@ID"
+  },
+  "updateAssemblyPN":
+  {
+    "sql":"UPDATE Assemblies SET PN = '@pn' WHERE AssemblyNumber ='@as'"
+  }
+
+}

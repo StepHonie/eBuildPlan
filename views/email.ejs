@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Email Group</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+
+  <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+  <script type="text/javascript" src="/js/func.js"></script>
+  <script type="text/javascript" src="/js/email.js"></script>
+
+</head>
+<body>
+  <div id="indexInfo">
+    <div id="indexHead">
+      <div id="headName">
+        <span>Email Manage</span>
+      </div>
+      <div id="headBtn" style="margin:5px">
+        <table style="width:100%">
+          <tr id="tbhead">
+            <td>Email</td>
+            <td>Customer</td>
+            <td>Family</td>
+            <td>EmailGroup</td>
+          </tr>
+    			<tr>
+    				<td style="width:300px">
+              <input class="form-control" id="emailList" placeholder="请用 “ ; ” 分隔" style="width:250px;"></input>
+            </td>
+            <td>
+              <select class="form-control" id="ecus">
+                <option style="display:none"></option>
+              </select>
+            </td>
+    				<td>
+              <select class="form-control" id="efam">
+    					  <option style="display:none"></option>
+    					</select>
+    				</td>
+    				<td>
+              <input class="form-control" id="emailGroup">
+    					</input>
+    				</td>
+            <td>
+              <button id="addEmail" class="btn btn-success" style="height:30px;width:80px;margin-left:10px;font-weight:bold">Add</button>
+            </td>
+    			</tr>
+        </table>
+      </div>
+    </div>
+    <div id="">
+      <table class="table table-condensed">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Email Address</th>
+          <th>Customer</th>
+          <th>Family</th>
+          <th>EmailGroup</th>
+          <th style="text-align:center">Edit</th>
+        </tr>
+      </thead>
+      <tbody id="emList">
+        <%for(let i=0;i<result.length;i++){
+          let x = result[i] || {id:"",EmailAddress:"",Customer:"",Family:"",EmailGroup:""};
+        %>
+          <tr id="<%=x.ID%>">
+            <td><%=x.EmailAddress%></td>
+            <td><%=x.Customer%></td>
+            <td><%=x.Family%></td>
+            <td><%=x.EmailGroup%></td>
+            <td>
+              <img class="delEmailList" src="/images/icons/close.png" style="margin:0 auto;display:none">
+            </td>
+          </tr>
+        <%}%>
+      </tbody>
+    </table>
+    </div>
+    <div id="indexFooter">
+      <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+    </div>
+  </div>
+</body>
+</html>

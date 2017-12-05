@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%=title%></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/js/func.js"></script>
+  <script type="text/javascript" src="/js/pnrep.js"></script>
+
+</head>
+<body>
+  <div id="indexInfo">
+    <div id="indexHead">
+      <div id="headName">
+        <span>IO Report</span>
+      </div>
+      <div id="headBtn" style="margin:5px">
+        <table style="width:100%">
+          <tr id="tbhead">
+            <td>Date From</td>
+            <td>Date To</td>
+            <td>Customer</td>
+            <td>Family</td>
+            <td>Area</td>
+          </tr>
+    			<tr>
+    				<td style="width:300px">
+              <input class="form-control" id="fdate" type="date" style="width:250px"/>
+            </td>
+            <td style="width:300px">
+              <input class="form-control" id="tdate" type="date" style="width:250px"/>
+            </td>
+            <td style="width:300px">
+              <select class="form-control" id="selCus" style="width:200px">
+                <option value="">All</option>
+              </select>
+            </td>
+            <td style="width:300px">
+              <select class="form-control" id="selfam" style="width:200px">
+                <option value="">All</option>
+              </select>
+            </td>
+    				<td style="width:300px">
+              <select class="form-control" id="selArea" style="width:200px">
+                <option value="">All</option>
+    					</select>
+    				</td>
+            <td style="width:200px">
+              <button id="viewBP" class="btn btn-success" style="height:30px;width:80px;font-weight:bold">View</button>
+            </td>
+    			</tr>
+        </table>
+      </div>
+    </div>
+    <div id="indexBody">
+      <table class="table table-condensed">
+        <caption></caption>
+        <thead>
+           <tr id="thList">
+          </tr>
+        </thead>
+        <tbody id="tbList">
+        </tbody>
+      </table>
+    </div>
+    <div id="indexFooter">
+  <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</body>
+</html>

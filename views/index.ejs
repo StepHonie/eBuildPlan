@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IOReport</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/js/func.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
+</head>
+<body>
+  <div id="indexInfo">
+    <div id="indexHead">
+      <div id="headName">
+        <span>IO Report</span>
+      </div>
+      <div id="headBtn" style="margin:5px">
+        <table style="width:100%">
+          <tr id="tbhead">
+            <td>Customer</td>
+            <td>Family</td>
+            <td>Area</td>
+            <td>Input_Station</td>
+            <td>Output_Station</td>
+            <td>Inupt_PanelCount</td>
+            <td>Output_PanelCount</td>
+          </tr>
+    			<tr>
+    				<td>
+              <select class="form-control" id="customer" style="width:150px"></select>
+            </td>
+            <td>
+              <select class="form-control" id="family">
+                <option value="">All</option>
+              </select>
+            </td>
+    				<td>
+              <select class="form-control" id="area">
+                <option value="">All</option>
+    					</select>
+    				</td>
+    				<td>
+              <select class="form-control" id="input_station">
+    					  <option value="1">All</option>
+    					</select>
+    				</td>
+    				<td>
+              <select class="form-control" id="output_station">
+    					  <option value="">All</option>
+    					</select>
+    				</td>
+            <td>
+              <input id="ipcount" class="form-control" type="text">
+    				</td>
+            <td>
+              <input id="opcount" class="form-control" type="text">
+    				</td>
+            <td>
+              <button id="btnAdd" class="btn btn-success" style="height:30px;width:80px;margin-left:10px;font-weight:bold">Add</button>
+            </td>
+    			</tr>
+        </table>
+      </div>
+    </div>
+    <div id="indexBody">
+      <table class="table table-condensed">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th>Customer_ID</th>
+            <th>Family_ID</th>
+            <th>Area</th>
+            <th>Input_Station</th>
+            <th>Output_Station</th>
+            <th>Input_PanelCount</th>
+            <th>Output_PanelCount</th>
+            <th style="text-align:center">Edit</th>
+          </tr>
+        </thead>
+        <tbody id="asList">
+        <%for(var i=0;i<result.length;i++){
+          let x = result[i] || {id:"",Customer_ID:"",Family_ID:"",Area:"",Input_Station:"",Output_Station:"",Input_PanelCount:"",Output_PanelCount:""};
+        %>
+        <tr id="<%=x.ID%>">
+          <td><%=x.Customer_ID%></td>
+          <td><%=x.Family_ID%></td>
+          <td><%=x.Area%></td>
+          <td><%=x.Input_Station%></td>
+          <td><%=x.Output_Station%></td>
+          <td><%=x.Input_PanelCount%></td>
+          <td><%=x.Output_PanelCount%></td>
+          <td>
+            <img  class="delAreaList" src="/images/icons/close.png" style="margin:0 auto;display:none">
+          </td>
+        </tr>
+        <%}%>
+      </tbody>
+      </table>
+    </div>
+    <div id="indexFooter">
+  <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</body>
+</html>

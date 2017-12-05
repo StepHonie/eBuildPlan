@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assembly</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+
+  <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+  <script type="text/javascript" src="/js/func.js"></script>
+  <script type="text/javascript" src="/js/assembly.js"></script>
+</head>
+<body>
+  <div id="indexInfo">
+    <div id="indexHead">
+      <div id="headName">
+        <span>AssemblyPN</span>
+      </div>
+      <div id="headBtn" style="margin:5px;">
+        <!-- <button id="saveAssem" class="btn btn-success" style="height:30px;width:80px;font-weight:bold;float:right;margin:15px 50px 0 0">Save</button> -->
+      </div>
+    </div>
+    <div id="">
+      <table class="table table-condensed">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Family</th>
+          <th>AssemblyNumber</th>
+          <th>CustomerPN</th>
+        </tr>
+      </thead>
+      <tbody id="assemList">
+          <%for(var i=0;i<result.length;i++){
+            var x = result[i] || {id:"",AssemblyNumber:"",Customer_ID:"",Family_ID:"",PN:""};
+          %>
+          <tr id="ss">
+            <td style="width:200px"><%=x.Customer_ID%></td>
+            <td style="width:200px"><%=x.Family_ID%></td>
+            <td style="width:300px"><%=x.AssemblyNumber%></td>
+            <td style="width:300px"><a href="#"><%=x.PN%></a></td>
+            <td class="updateAssem">
+              <img src="/images/icons/check.png" style="height:19px;margin:0 auto;display:none">
+            </td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+    </div>
+    <div id="indexFooter">
+      <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+    </div>
+  </div>
+</body>
+</html>

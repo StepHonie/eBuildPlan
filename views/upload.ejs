@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap-fileinput/css/fileinput.min.css" media="all"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/> -->
+  <!-- <link rel="stylesheet" href="/styles/index.css"> -->
+
+  <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="/libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap-fileinput/themes/fa/theme.js"></script> -->
+  <!-- <script type="text/javascript" src="/libs/xlsx.core.min.js"></script> -->
+  <!-- <script lang="javascript" src="libs/shim.js"></script> -->
+  <script lang="javascript" src="libs/xlsx.full.min.js"></script>
+
+
+  <!-- <script type="text/javascript" src="/js/mailSender.js"></script> -->
+  <script type="text/javascript" src="/js/upload.js"></script>
+
+</head>
+<body>
+  <div id="indexInfo" style="margin:0 auto;width:86%">
+    <div id="indexHead" style="height:100px;background-color: #ECF0F5;">
+      <div id="headName" style="height:30px;background-color: #3C8DBC;">
+        <span style="font-size:20px;color:white;margin-left:10px">IO Report</span>
+      </div>
+      <div id="headBtn" style="margin-top:10px">
+        <table style="width:100%">
+          <tr>
+            <td>
+              <b>EmailGroup</b>
+              <select class="form-control" id="selGroup" style="width:200px">
+                <option value="Group one">Group one</option>
+                <option value="Group two">Group two</option>
+              </select>
+            </td>
+            <td>
+              <form action="">
+                <input id="iptCsv" type="file" name="选择文件"/>
+              </form>
+            </td>
+            <td>
+              <button id="btnUpload">上传文件</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="indexBody">
+      <table class="table table-condensed">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Area</th>
+            <th>AssemblyNumber</th>
+            <th>Date</th>
+            <th>Input</th>
+            <th>Output</th>
+            <th>Status</th>
+            <th>Failed Reason</th>
+          </tr>
+        </thead>
+        <tbody id="asList">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
